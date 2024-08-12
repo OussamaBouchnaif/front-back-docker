@@ -46,9 +46,9 @@ class TestController extends AbstractController
     public function games():JsonResponse
     {
         $games = [
-            ['id' => 1, 'name' => 'Game One', 'description' => 'Description for Game One'],
-            ['id' => 2, 'name' => 'Game Two', 'description' => 'Description for Game Two'],
-            ['id' => 3, 'name' => 'Game Three', 'description' => 'Description for Game Three'],
+            ['id' => 1, 'name' => 'Game One', 'description' => 'Description for Game One','platform'=>'pc'],
+            ['id' => 2, 'name' => 'Game Two', 'description' => 'Description for Game Two','platform'=>'playstation'],
+            ['id' => 3, 'name' => 'Game Three', 'description' => 'Description for Game Three','platform'=>'xbox'],
         ];
 
         return new JsonResponse(['results' => $games]);

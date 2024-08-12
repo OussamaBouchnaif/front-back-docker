@@ -1,4 +1,4 @@
-import { Flex, flexbox, SimpleGrid } from "@chakra-ui/react";
+import { Flex, flexbox, SimpleGrid, Text } from "@chakra-ui/react";
 import { useGames } from "../hooks/useGames";
 import { GameCard } from "./GameCard";
 
@@ -13,6 +13,7 @@ export const GameGrid = () => {
       >
         {games.map((game) => (
           <GameCard key={game.id} game={game} />
+          
         ))}
       </SimpleGrid>
     </>
