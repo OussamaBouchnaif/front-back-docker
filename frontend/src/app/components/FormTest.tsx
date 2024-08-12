@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const ProductForm = () => {
+const FormTest = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: ''
@@ -53,4 +53,4 @@ const ProductForm = () => {
   );
 };
 
-export default ProductForm;
+export default FormTest;
