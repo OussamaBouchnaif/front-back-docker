@@ -31,7 +31,7 @@ class SlugGeneratorListener
             $slug = $this->slugify->slugify($games->getName());
             $games->setSlug($slug);
             // For debugging
-             dd($slug);
+            // dd($slug);
         }
     }
 }
