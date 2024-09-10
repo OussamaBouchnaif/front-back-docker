@@ -5,9 +5,9 @@ export const ColorModeSwitch = () => {
     const {toggleColorMode,colorMode} = useColorMode();
 
   return (
-    <HStack justifyContent="center" alignItems="center">
+    <HStack >
         <Switch colorScheme='green' isChecked={colorMode === 'dark'} onChange={toggleColorMode}></Switch>
-        <Text>NavBar</Text>
+
     </HStack>
   )
 }

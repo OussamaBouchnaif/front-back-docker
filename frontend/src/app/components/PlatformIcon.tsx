@@ -31,7 +31,7 @@ import {
   
     return (
       <HStack marginY={1}> 
-          <Icon  as={iconMap[platform]} color='gray.500' fontSize={20}/>
+          <Icon key={platform} as={iconMap[platform]} color='gray.500' fontSize={20}/>
       </HStack>
     );
   };

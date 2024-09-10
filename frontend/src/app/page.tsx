@@ -1,14 +1,11 @@
 "use client";
 
-import { useState } from "react";
 import { ChakraProvider, ColorModeScript, Grid, GridItem, Show } from "@chakra-ui/react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Button, ButtonGroup } from "@chakra-ui/react";
 import { NavBar } from "./components/NavBar";
 import theme from "./Theme";
 import { GameGrid } from "./components/GameGrid";
-import FormTest from "./components/FormTest";
-import FetchTest from "./components/FetchTest";
+import { GenresList } from "./components/GenresList";
 
 
 function App() {
@@ -27,7 +24,7 @@ function App() {
         </GridItem>
         <Show above="lg">
           <GridItem area="aside" >
-            ASIDE
+            <GenresList></GenresList>
           </GridItem>
         </Show>
         <GridItem area="main" >

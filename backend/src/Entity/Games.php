@@ -39,6 +39,15 @@ class Games
     #[ORM\Column]
     private ?\DateTimeImmutable $updatesAt = null;
 
+    #[ORM\ManyToOne(inversedBy: 'games')]
+    private ?Genre $genre = null;
+
+    #[ORM\Column(length: 10)]
+    private ?string $platform = null;
+
+    #[ORM\Column]
+    private ?int $score = null;
+
     public function __construct()
     {
         $this->updatesAt = new \DateTimeImmutable;
@@ -140,6 +149,42 @@ class Games
     public function setUpdatesAt(\DateTimeImmutable $updatesAt): static
     {
         $this->updatesAt = $updatesAt;
+
+        return $this;
+    }
+
+    public function getGenre(): ?Genre
+    {
+        return $this->genre;
+    }
+
+    public function setGenre(?Genre $genre): static
+    {
+        $this->genre = $genre;
+
+        return $this;
+    }
+
+    public function getPlatform(): ?string
+    {
+        return $this->platform;
+    }
+
+    public function setPlatform(string $platform): static
+    {
+        $this->platform = $platform;
+
+        return $this;
+    }
+
+    public function getScore(): ?int
+    {
+        return $this->score;
+    }
+
+    public function setScore(int $score): static
+    {
+        $this->score = $score;
 
         return $this;
     }
